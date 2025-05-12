@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import { Menu, X,Search  } from 'lucide-react'; // npm install lucide-react (optional for icons)
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,8 +22,12 @@ setSearch('');
     <nav className="w-full bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/"><div className="text-2xl font-bold text-amber-500">MessMate</div></Link>
-
+        {/* <Link href="/"><div className="text-2xl font-bold text-amber-500">MessMate</div></Link> */}
+  <Link href="/">
+      
+        <Image src="/messmatelogo.png" alt="MessMate Logo" width={95} height={95} />
+      
+    </Link>
 
       <div className="relative w-full max-w-md flex items-center">
       {/* Icon inside the input */}
