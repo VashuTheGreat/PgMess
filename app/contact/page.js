@@ -1,6 +1,5 @@
-import { FaFacebook, FaYoutube, FaInstagram, FaWhatsapp, FaPhone,FaEnvelope, FaTelegramPlane,
+import { FaYoutube,FaWhatsapp, FaPhone,FaEnvelope, FaTelegramPlane,
   FaLinkedin, } from "react-icons/fa";
-
 
 const ContactPage = () => {
   return (
@@ -10,8 +9,6 @@ const ContactPage = () => {
       
       {/* Social Icons */}
       <div className="flex gap-6 text-3xl">
-
-
 
         <a
   href="https://www.youtube.com/@VashuTheGreat" // replace with your YouTube channel link
@@ -65,4 +62,3 @@ const ContactPage = () => {
 };
 
 export default ContactPage;
-9
