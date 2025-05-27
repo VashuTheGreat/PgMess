@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import { account } from "@/lib/appwrite";
 
+
 export default function LoginPage() {
 
      const [name, setName] = useState("");
@@ -12,6 +13,7 @@ export default function LoginPage() {
   const [foodPreference, setFoodPreference] = useState("");
   const [roomType, setRoomType] = useState("");
   const isFormValid = name && college && course;
+
 
 
 
@@ -40,6 +42,8 @@ alert("please fill the mandatory detzils first");
       "http://localhost:3000/login"       // failure URL
     );
   };
+
+  
 
   return (
    <div className="min-h-screen flex items-center justify-center bg-gray-900 text-white">

@@ -12,7 +12,7 @@ export default function Home() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-md">
         <Link
-          href="/properties?type=pg"
+          href="/pg"
           className="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
         >
           <h2 className="text-2xl font-semibold text-blue-600 mb-2">PG</h2>
@@ -20,7 +20,7 @@ export default function Home() {
         </Link>
 
         <Link
-          href="/properties?type=mess"
+          href="/mess"
           className="block bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
         >
           <h2 className="text-2xl font-semibold text-green-600 mb-2">Mess</h2>
