@@ -1,6 +1,8 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { useUser } from "@/context/UserContext";
+
 
 const Page = () => {
   const [about, setabout] = useState<{
@@ -21,6 +23,16 @@ const Page = () => {
     max_price: 0
   });
 
+
+const {handleSetcon } = useUser();
+
+
+  const handleClick=()=>{
+    console.log("clicked");
+    handleSetcon(about);
+
+  }
+
   useEffect(() => {
     setabout({
       name: "OYO Hotel Alice TX Hwy 281 West",
@@ -33,6 +45,9 @@ const Page = () => {
       max_price: 900,
     })
 
+
+
+
   }, []);
 
   return (
@@ -44,7 +59,7 @@ const Page = () => {
           className="w-full h-48 object-cover"
         />
 
-        <Link href="/abpg"><div className="p-4 space-y-2">
+        <Link href="/abpg"><div className="p-4 space-y-2" onClick={handleClick}>
           <h2 className="text-lg font-bold text-gray-800 truncate">
             {about.name}
           </h2>

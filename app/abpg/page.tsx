@@ -8,8 +8,11 @@ import "swiper/css/navigation";
 
 import { Pagination, Navigation } from "swiper/modules";
 import Link from "next/link";
+import { useUser } from "@/context/UserContext";
+
 
 export default function App() {
+    const {maincon}=useUser();
     return (
         <div className="bg-gray-100 min-h-screen">
             {/* Swiper Slider */}
@@ -54,18 +57,18 @@ export default function App() {
   {/* Hotel Info Section */}
   <div className="w-full lg:w-2/3 bg-white shadow-lg rounded-lg p-6 font-sans">
     <h1 className="text-3xl font-bold text-red-600">
-      OYO Hotel Alice TX Hwy 281 West
+      {maincon.name}
     </h1>
 
     <p className="text-sm text-gray-600 mt-1">
-      815, Hwy S 281, Alice TX, Texas, 78332, United States
+      {maincon.smallAdress}
     </p>
 
     <div className="flex items-center mt-3 space-x-2">
       <span className="bg-green-600 text-white text-sm px-2 py-1 rounded">
         2.8 ⭐
       </span>
-      <span className="text-gray-500 text-sm">(271 Ratings)</span>
+      <span className="text-gray-500 text-sm">({maincon.ratings} Ratings)</span>
     </div>
 
     <p className="mt-4 text-gray-700">

@@ -4,13 +4,24 @@ import React, { createContext, useState, useContext, useEffect } from "react";
 interface UserContextType {
   user_student: any;
   setUser_student: (user: any) => void;
+  maincon: any;
+  handleSetcon: (key: any) => void;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   const [user_student, setUser_student] = useState<any>(null);
+  const [maincon,setMaincon]=useState<any>({});
+  
 
+
+  const handleSetcon=(key: any)=>{
+    console.log(key);
+    setMaincon(key);
+
+
+  }
   useEffect(() => {
     const user = localStorage.getItem("user_student");
     if (user) {
@@ -19,7 +30,7 @@ export const UserProvider = ({ children }: { children: React.ReactNode }) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ user_student, setUser_student }}>
+    <UserContext.Provider value={{ user_student, setUser_student,maincon,handleSetcon }}>
       {children}
     </UserContext.Provider>
   );

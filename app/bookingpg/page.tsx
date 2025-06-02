@@ -2,10 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { MessageCircle, Phone, MapPin } from "lucide-react";
+import { useUser } from "@/context/UserContext";
+
 
 const BuyPage = () => {
-  const image = "https://images.oyoroomscdn.com/uploads/hotel_image/219311/large/dbd1a4653c2f80e3.JPG"; // Replace with actual image path
-  const name = "Aloo PG";
+    const {maincon}=useUser();
+    const image = maincon.image; // Replace with actual image path  const name = "Aloo PG";
   const price = 299;
   const color = 300;
   const size = 500;
