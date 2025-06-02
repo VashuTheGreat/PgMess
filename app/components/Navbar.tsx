@@ -60,7 +60,7 @@ const Navbar = () => {
         </ul>
 
         {!user_student && (
-          <Link href="/login">
+          <Link href="/login" target='_blank'>
             <button className="cursor-pointer bg-amber-400 hover:bg-amber-500 text-white font-semibold px-6 py-2 rounded-xl shadow-md transition-all duration-300 ease-in-out hover:scale-105">
               Login
             </button>
@@ -68,7 +68,7 @@ const Navbar = () => {
         )}
 
         {user_student && (
-          <Link href="/dashboard">
+          <Link href="/dashboard" target='_blank'>
             <div className="w-12 h-12 bg-amber-400 text-white flex items-center justify-center rounded-full text-lg font-semibold shadow-md">
               {initial}
             </div>
