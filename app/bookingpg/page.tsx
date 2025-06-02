@@ -45,8 +45,8 @@ const BuyPage = () => {
         <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4 text-black">
         <div className="bg-white shadow-md rounded-lg p-6 text-center">
           <h1 className="text-2xl font-bold mb-4">Booking Summary</h1>
-          <img src={image} alt={name} width={160} height={160} className="rounded-lg mx-auto mb-4" />
-          <p className="text-lg"><strong>PG:</strong> {name}</p>
+          <img src={image} alt={maincon.name} width={160} height={160} className="rounded-lg mx-auto mb-4" />
+          <p className="text-lg"><strong>PG:</strong> {maincon.name}</p>
           <p className="text-lg"><strong>Single:</strong> &#8377;{price}</p>
           <p className="text-lg"><strong>Double:</strong>&#8377; {color}</p>
           <p className="text-lg"><strong>Triple:</strong> &#8377;{size}</p>
